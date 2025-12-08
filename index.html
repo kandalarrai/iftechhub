@@ -157,11 +157,41 @@
 
 
   <!-- Contato e fale conosco -->
-  <section id="contato" class="py-5 bg-white">
+<section id="contato" class="py-5 bg-white">
     <div class="container">
-      <h2 class="text-center mb-4">Entre em contato conosco</h2>
-      
-  </section>
+        <h2 class="text-center mb-4">Entre em contato conosco</h2>
+        <p class="text-center mb-4">
+            Preencha o formulário abaixo para falar com a equipe da IFTechHub.
+        </p>
+
+        <form action="contato.php" method="post" class="mx-auto" style="max-width: 600px;">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome completo *</label>
+                <input type="text" id="nome" name="nome" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail *</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="assunto" class="form-label">Assunto *</label>
+                <input type="text" id="assunto" name="assunto" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem *</label>
+                <textarea id="mensagem" name="mensagem" class="form-control" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+                Enviar mensagem
+            </button>
+        </form>
+    </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="py-4 bg-primary text-white">
