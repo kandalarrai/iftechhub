@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css/sections.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/diferenciais.css">
+  <link rel="stylesheet" href="css/servicos.css">
+
 
   <link rel="shortcut icon" href="img/fivicon/fivicon.png" type="image/x-icon">
 </head>
@@ -89,6 +91,76 @@
   </div>
 </section>
 
+<!-- Serviços Prestados -->
+<section id="servicos" class="py-5 bg-white">
+  <div class="container" style="max-width:1300px;">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="service-left">
+          <div class="d-flex align-items-center mb-3">
+            
+            <div>
+              <h2 class="service-title mb-0">Nossos Serviços</h2>
+            </div>
+          </div>
+
+          <div class="service-accent">
+            <h3 class="service-sub">Trabalhamos ao seu lado para transformar ideias em produtos digitais.</h3>
+          </div>
+
+          <p class="service-desc">
+            A IFTechHub é uma startup dedicada a transformar ideias em sistemas modernos para internet. Desenvolvemos aplicações web completas, integrações entre serviços e soluções digitais sob medida, sempre unindo inovação, acessibilidade e boas práticas de engenharia. Atuamos desde a análise do problema até a implantação e manutenção contínua, priorizando código limpo, documentação clara e evolução constante dos projetos.
+          </p>
+          <div style="margin-top:1.25rem;">
+            <a href="#contato" class="btn btn-outline-success btn-lg" aria-label="Entrar em contato com a IFTechHub">Fale com a gente</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="service-media">
+          <img src="img/index/servicos.jpg" alt="Equipe IFTechHub trabalhando" class="img_servico">
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-5">
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="service-card" role="article" aria-labelledby="srv-aloc">
+          <div class="service-card-body">
+            <h4 id="srv-aloc">Integração e Comunicação entre Serviços Web</h4>
+            <p>
+              Desenvolvemos e implementamos integrações entre sistemas, permitindo que aplicações na web troquem informações de forma rápida e segura. Criamos APIs, conectamos bancos de dados, automatizamos processos e unificamos diferentes plataformas em um único fluxo digital.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="service-card" role="article" aria-labelledby="srv-dev">
+          <div class="service-card-body">
+            <h4 id="srv-dev">Desenvolvimento de Sistemas Web Personalizados</h4>
+            <p>
+              Criamos sistemas completos para internet, como plataformas responsivas, painéis administrativos e aplicações sob medida. Aplicamos arquitetura escalável, boas práticas de programação e integrações com APIs para garantir desempenho e evolução contínua.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="service-card" role="article" aria-labelledby="srv-audit">
+          <div class="service-card-body">
+            <h4 id="srv-audit">Otimização, Manutenção e Evolução de Sistemas Web</h4>
+            <p>
+              Realizamos melhorias em sistemas já existentes, corrigindo falhas, aumentando desempenho e aprimorando a experiência do usuário. Atuamos com monitoramento, atualizações, refatoração de código e implementação de novas funcionalidades para manter sua solução sempre atual e eficiente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- Seção Membros-->
 <section id="equipe" class="py-5">
@@ -156,14 +228,6 @@
   </div>
 </section>
 
-  <!-- Serviços Prestados-->
-  <section id="servicos" class="py-5 bg-white">
-    <div class="container">
-      <h2 class="mb-4 text-center">Nossos Serviços</h2>
-      
-    </div>
-  </section>
-
   <!-- Diferenciais -->
     <section id="diferenciais" class="py-5 bg-light">
       <h2 class="text-center mb-5">Diferenciais</h2>
@@ -198,15 +262,14 @@
   </section>
 
   <!-- Contato e fale conosco -->
-<section id="contato" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-3">Entre em contato conosco</h2>
-    <p class="text-center mb-4">
-      Preencha o formulário abaixo e fale com a equipe da IFTechHub.
-    </p>
+<section id="contato" class="py-5 bg-white">
+    <div class="container" style="max-width: 700px;">
+      <h2 class="text-center mb-4">Entre em contato conosco</h2>
+      <p class="text-center mb-4">
+        Preencha o formulário abaixo e fale com a equipe da IFTechHub.
+      </p>
 
-    <div class="contact-wrapper mx-auto">
-      <form>
+      <form id="form-contato" action="contato.php" method="post">
         <div class="mb-3">
           <label for="nome" class="form-label">Nome completo *</label>
           <input type="text" id="nome" name="nome" class="form-control" required>
@@ -224,7 +287,8 @@
 
         <div class="mb-3">
           <label for="mensagem" class="form-label">Mensagem *</label>
-          <textarea id="mensagem" name="mensagem" class="form-control" rows="4" required></textarea>
+
+              <textarea id="mensagem" name="mensagem" class="form-control" rows="4" required></textarea>
         </div>
 
         <div class="text-center">
@@ -243,58 +307,57 @@
       <strong>© 2025 IFTechHub</strong>
     </div>
   </footer>
+
+  <script>
+  (function () {
+    const track = document.getElementById('teamTrack');
+    const prev = document.getElementById('team-prev');
+    const next = document.getElementById('team-next');
+
+    function scrollAmount() {
+      return track.parentElement.clientWidth * 0.95;
+    }
+
+    prev.addEventListener('click', () => {
+      track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+    });
+
+    next.addEventListener('click', () => {
+      track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+    });
+
+    function updateNav() {
+      const maxScrollLeft = track.scrollWidth - track.clientWidth;
+      prev.disabled = track.scrollLeft <= 5;
+      next.disabled = track.scrollLeft >= maxScrollLeft - 5;
+      prev.classList.toggle('opacity-50', prev.disabled);
+      next.classList.toggle('opacity-50', next.disabled);
+    }
+    track.addEventListener('scroll', updateNav);
+    window.addEventListener('resize', updateNav);
+    updateNav();
+
+    let startX = 0;
+    let isTouching = false;
+    track.addEventListener('touchstart', (e) => {
+      isTouching = true;
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    track.addEventListener('touchmove', (e) => {
+      if (!isTouching) return;
+      const dx = startX - e.touches[0].clientX;
+      track.scrollLeft += dx;
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', () => { isTouching = false; updateNav(); });
+    track.tabIndex = 0;
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') next.click();
+      if (e.key === 'ArrowLeft') prev.click();
+    });
+  })();
+  </script>
 </body>
 </html>
-
-
-<script>
-(function () {
-  const track = document.getElementById('teamTrack');
-  const prev = document.getElementById('team-prev');
-  const next = document.getElementById('team-next');
-
-  function scrollAmount() {
-    return track.parentElement.clientWidth * 0.95;
-  }
-
-  prev.addEventListener('click', () => {
-    track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
-  });
-
-  next.addEventListener('click', () => {
-    track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
-  });
-
-  function updateNav() {
-    const maxScrollLeft = track.scrollWidth - track.clientWidth;
-    prev.disabled = track.scrollLeft <= 5;
-    next.disabled = track.scrollLeft >= maxScrollLeft - 5;
-    prev.classList.toggle('opacity-50', prev.disabled);
-    next.classList.toggle('opacity-50', next.disabled);
-  }
-  track.addEventListener('scroll', updateNav);
-  window.addEventListener('resize', updateNav);
-  updateNav();
-
-  let startX = 0;
-  let isTouching = false;
-  track.addEventListener('touchstart', (e) => {
-    isTouching = true;
-    startX = e.touches[0].clientX;
-  }, { passive: true });
-
-  track.addEventListener('touchmove', (e) => {
-    if (!isTouching) return;
-    const dx = startX - e.touches[0].clientX;
-    track.scrollLeft += dx;
-    startX = e.touches[0].clientX;
-  }, { passive: true });
-
-  track.addEventListener('touchend', () => { isTouching = false; updateNav(); });
-  track.tabIndex = 0;
-  track.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') next.click();
-    if (e.key === 'ArrowLeft') prev.click();
-  });
-})();
-</script>

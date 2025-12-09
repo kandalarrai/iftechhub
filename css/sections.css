@@ -126,4 +126,11 @@
 
 #contato button.btn-primary {
     border-radius: 999px;
+
+.container {
+  max-width: 1400px !important;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
 }
